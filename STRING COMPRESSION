@@ -1,0 +1,11 @@
+string=str(input("Enter any string: "))
+result=""
+count=1
+for i in range(len(string)):
+    if i+1<len(string) and string[i]==string[i+1]:
+        count+=1
+    else:
+        result=result+string[i]
+        result=result+str(count)
+        count=1
+print(result)
