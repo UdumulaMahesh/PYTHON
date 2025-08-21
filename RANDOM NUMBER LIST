@@ -1,0 +1,7 @@
+import random
+lest=[]
+while(len(lest)!=5):
+    randnum=random.randint(0,10)
+    if randnum not in lest:
+        lest.append(randnum)
+print(lest)
