@@ -1,0 +1,20 @@
+import time
+import sys
+hours=10
+minutes=22
+seconds=0
+while(True):
+    sys.stdout.write(f"\r{hours:02d}:{minutes:02d}:{seconds:02d}")
+    sys.stdout.flush()
+    time.sleep(1)
+    seconds+=1
+    if seconds==60:
+        minutes+=1
+        seconds=0
+    if minutes==60:
+        minutes=0
+        hours+=1
+    if hours==13:
+        minutes=0
+        seconds=0
+        hours=0
