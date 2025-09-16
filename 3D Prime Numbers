@@ -1,0 +1,22 @@
+def check_prime_number(i):
+    for j in range (2,i):
+        if i%j==0:
+            return False
+    return True
+
+def sum_of_digits(i):
+    d=[int (i) for i in str(i)]
+    return sum(d)
+    
+def all_digits(i):
+    while(i!=0):
+        d=i%10
+        if (not check_prime_number(d)):
+            return False
+        i=i//10
+    return True
+    
+
+for i in range (200,1000):
+    if ( check_prime_number(i) and check_prime_number(sum_of_digits(i)) and all_digits(i)):
+        print(i,end=" ")
