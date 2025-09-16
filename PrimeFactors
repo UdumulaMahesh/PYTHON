@@ -1,0 +1,15 @@
+
+
+
+def prime_factors(n,i):
+    if n<=1:
+        return 
+    while(n%i!=0):
+        i+=1
+    print(i,end=" ")
+    prime_factors(n//i,i)
+    
+
+n=int(input("Enter any number :"))
+i=2
+prime_factors(n,i)
